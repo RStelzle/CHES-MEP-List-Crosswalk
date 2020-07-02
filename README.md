@@ -11,7 +11,8 @@ to various other datasets e.g. via the [Party Facts
 project](https://partyfacts.herokuapp.com/) (Bederke, Döring, and Regel
 2020).
 
-An explanation on how to link the two datasets is given in `link-data.R`
+An explanation on how to link the two datasets is given in
+[`link-data.R`](https://github.com/RStelzle/CHES-MEP-List-Crosswalk/blob/master/link-data.R).
 
 The crosswalk-dataset was created on July 7th 2020. As the list of MEPs
 can and will be subject to change (MEPs leaving, new MEPs joining, MEPs

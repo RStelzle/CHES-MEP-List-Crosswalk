@@ -19,7 +19,7 @@ Uncoded_Parties <- sum(is.na(crosswalk_data$ches_party_id))
 
 This dataset allows to link data from the [2019 Chapel Hill expert Survey](https://www.chesdata.eu/2019-chapel-hill-expert-survey) [@bakker2019ChapelHill2020] to the [full list of Members of the European Parliament](https://www.europarl.europa.eu/meps/en/full-list/all) [@europeanparliamentFullListMEPs2020] via their membership in national political parties. Subsequently, the linked data can be used to combine MEP-Data to various other datasets e.g. via the [Party Facts project](https://partyfacts.herokuapp.com/) [@bederkePartyFacts].
 
-An explanation on how to link the two datasets is given in `link-data.R`
+An explanation on how to link the two datasets is given in [`link-data.R`](https://github.com/RStelzle/CHES-MEP-List-Crosswalk/blob/master/link-data.R).
 
 The crosswalk-dataset was created on July 7th 2020. As the list of MEPs can and will be subject to change (MEPs leaving, new MEPs joining, MEPs changing parties, parties changing names, etc.) the crosswalk-dataset may break in the future. Make shure to double-check before using this data! Currently, I was unable to link `r Uncoded_Parties` of the `r Number_EPParties` parties represented in the EP to partycodes from the CHES, though some of those are singular independent MEPs without current party affiliation.
 
