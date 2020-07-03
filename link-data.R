@@ -15,7 +15,11 @@ crosswalk <- read_csv("crosswalk-mep-ches.csv")
 
 
 ## Link MEP- and crosswalk-data
-tmp <- left_join(mep_list, crosswalk, by = "nationalPoliticalGroup") %>% mutate(party_id = ches_party_id)
+tmp <- left_join(mep_list, crosswalk, by = "nationalPoliticalGroup") %>% 
+  mutate(party_id = ches_party_id) %>% 
+  filter(country.x == country.y) %>% 
+  select(-country.y) %>% 
+  rename(country = country.x)
 
 ## Link to CHES-data
 mep_ches_linked <- left_join(tmp, ches_data, by = "party_id")
